@@ -1,0 +1,77 @@
+type token =
+    WHERE
+  | VERIFY
+  | VARIABLE of string
+  | USE
+  | UNIQUE
+  | TIMES
+  | THEREIS
+  | ST
+  | SOME
+  | SOLUTION
+  | SEMICOLON
+  | RPAREN
+  | REL of string
+  | RCURLY
+  | RANGE
+  | PUZZLE
+  | PLUS
+  | ONE
+  | NOT
+  | NEVER
+  | NEQUALSIGN
+  | MORE
+  | MINUS
+  | LPAREN
+  | LESS
+  | LCURLY
+  | INT of int
+  | IN
+  | HAS
+  | GENERATE
+  | FSLASH
+  | FROM
+  | FORALL
+  | FIND
+  | EQUALSIGN
+  | EOF
+  | DOMAIN
+  | COMMA
+  | CARROT
+  | BSLASH
+val menhir_begin_marker : int
+val xv_statement : InputAst.t
+val xv_separated_nonempty_list_COMMA_numelementsaux_ : int list list
+val xv_separated_nonempty_list_COMMA_math_outer_ : Statements.body list
+val xv_separated_nonempty_list_COMMA_elem_ : Statements.element list
+val xv_separated_nonempty_list_COMMA_atom_ : Statements.body list
+val xv_separated_nonempty_list_COMMA_REL_ : string list
+val xv_separated_nonempty_list_COMMA_INT_ : int list
+val xv_separated_list_COMMA_numelementsaux_ : int list list
+val xv_separated_list_COMMA_math_outer_ : Statements.body list
+val xv_separated_list_COMMA_elem_ : Statements.element list
+val xv_separated_list_COMMA_atom_ : Statements.body list
+val xv_separated_list_COMMA_REL_ : string list
+val xv_separated_list_COMMA_INT_ : int list
+val xv_numelementsaux : int list
+val xv_numelements : int
+val xv_math_outer : Statements.body
+val xv_math_inner : Statements.operation
+val xv_main : InputAst.t list
+val xv_loption_separated_nonempty_list_COMMA_numelementsaux__ : int list list
+val xv_loption_separated_nonempty_list_COMMA_math_outer__ :
+  Statements.body list
+val xv_loption_separated_nonempty_list_COMMA_elem__ : Statements.element list
+val xv_loption_separated_nonempty_list_COMMA_atom__ : Statements.body list
+val xv_loption_separated_nonempty_list_COMMA_REL__ : string list
+val xv_loption_separated_nonempty_list_COMMA_INT__ : int list
+val xv_list_statement_ : InputAst.t list
+val xv_list_numelements_ : int list
+val xv_list_genaux_ : (int * string) list
+val xv_headatom : Statements.head
+val xv_genaux : int * string
+val xv_elem : Statements.element
+val xv_choiceatom_r : Statements.literal
+val xv_choiceatom_l : Statements.literal
+val xv_atom : Statements.body
+val menhir_end_marker : int

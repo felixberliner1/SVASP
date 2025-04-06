@@ -1,0 +1,23 @@
+type token =
+    UNSAT
+  | UNDERSCORE
+  | SAT
+  | RPAREN
+  | REL of string
+  | MISC
+  | LPAREN
+  | INT of int
+  | GEN
+  | EOF
+  | COMMA
+  | ANS
+val menhir_begin_marker : int
+val xv_separated_nonempty_list_COMMA_INT_ : int list
+val xv_separated_list_COMMA_INT_ : int list
+val xv_relations : int * string * int list
+val xv_outinfo : (int * string * int list) list option
+val xv_loption_separated_nonempty_list_COMMA_INT__ : int list
+val xv_list_relations_ : (int * string * int list) list
+val xv_list_junk_ : unit list
+val xv_junk : unit
+val menhir_end_marker : int

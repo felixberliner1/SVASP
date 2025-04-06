@@ -1,0 +1,3 @@
+use Cell(9);
+use Box(3,3);
+verify;
