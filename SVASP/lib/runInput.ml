@@ -258,7 +258,7 @@ let rec find_safe_unsafe_vars_body (body_args : body list) (safe_vars : string l
   match body_args with
   | [] -> safe_vs_unsafe (safe_vars) (unsafe_vars)
   | Atom (Pos (_, elems)) :: x -> find_safe_unsafe_vars_body (x) (add_elems_to_vars (safe_vars) (elems)) (unsafe_vars)
-  | Atom (Neg (_, elems)) :: x -> find_safe_unsafe_vars_body (x) (add_elems_to_vars (safe_vars) (elems)) (unsafe_vars)
+  | Atom (Neg (_, elems)) :: x -> find_safe_unsafe_vars_body (x) (safe_vars) (add_elems_to_vars (unsafe_vars) (elems))
   | Math (comp) :: x -> find_safe_unsafe_vars_body (x) (safe_vars) (add_elems_math (comp) (unsafe_vars))
   | _ :: x -> find_safe_unsafe_vars_body (x) (safe_vars) (unsafe_vars)
 
